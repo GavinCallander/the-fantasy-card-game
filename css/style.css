@@ -25,6 +25,9 @@ main {
     width: 100%;
     height: 50%;
     margin-bottom: .1em;
+    background-image: url("../img/dark-honeycomb.png");
+    background-size: cover;
+    color: white;
 }
 .player {
     display: flex;
@@ -32,6 +35,9 @@ main {
     width: 100%;
     height: 50%;
     margin-top: .1em;
+    background-image: url("../img/white-waves.png");
+    background-size: cover;
+    color: black;
 }
 .deck {
     display: flex;
@@ -39,6 +45,7 @@ main {
     height: 70%;
     margin-top: 2em;
     border-radius: 50%;
+    border: 1px solid goldenrod;
 }
 .action {
     display: flex;
@@ -53,6 +60,8 @@ main {
     height: 30%;
     width: 100%;
     text-align: center;
+    border: 1px solid goldenrod;
+    border-radius: 20%;
 }
 .comphand {
     display: flex;
@@ -79,6 +88,7 @@ main {
     justify-content: space-around;
     height: 70%;
     width: 100%;
+    border: 1px solid goldenrod;
 }
 .compfield {
     display: flex;
@@ -108,16 +118,19 @@ main {
     height: 30%;
     width: 80%;
     border-radius: 50%;
+    border: 1px solid transparent;
 }
 .atk {
     height: 20%;
     width: 20%;
     border-radius: 50%;
+    border: 1px solid transparent;
 }
 .hp {
     height: 20%;
     width: 20%;
     border-radius: 50%;
+    border: 1px solid transparent;
 }
 .lp {
     display: flex;
@@ -129,7 +142,4 @@ main {
     justify-content: center;
     align-items: center;
     font-size: 3em;
-}
-* {
-    border: 1px solid black;
 }

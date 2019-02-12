@@ -303,17 +303,6 @@ function battleResult() {
     endGame();
     endTurn();
 };
-// // direct hit
-// function playerDirect() {
-//     for (let i = 0; i < playerField.length; i++) {
-//         if (this.dataset.name === playerField[i].name) {
-//             compLp = compLp - playerField[i].atk;
-//         };
-//     };
-//     battleField = [];
-//     showCompLp();
-//     endGame();
-// };
 // ***COMP MOVE LOGIC***
 // comp AI
 function compTurn() {
@@ -431,6 +420,7 @@ function showPlayerHandCards() {
         pHand[i].children[1].textContent = card.atk;
         pHand[i].children[2].textContent = card.hp;
         pHand[i].setAttribute("data-name", card.name);
+        pHand[i].style.border = "1px solid black";
     });
 };
 // display cards in player field
@@ -440,6 +430,7 @@ function showPlayerFieldCards() {
         pField[i].children[1].textContent = card.atk;
         pField[i].children[2].textContent = card.hp;
         pField[i].setAttribute("data-name", card.name);
+        pField[i].style.border = "1px solid black";
     });
 };
 // ***COMP DISPLAY LOGIC***
@@ -456,6 +447,7 @@ function showCompHandCards() {
         cHand[i].children[1].textContent = card.atk;
         cHand[i].children[2].textContent = card.hp;
         cHand[i].setAttribute("data-name", card.name);
+        cHand[i].style.border = "1px solid white";
     });
 };
 // display cards in comp field
@@ -465,5 +457,6 @@ function showCompFieldCards() {
         cField[i].children[1].textContent = card.atk;
         cField[i].children[2].textContent = card.hp;
         cField[i].setAttribute("data-name", card.name);
+        cField[i].style.border = "1px solid white";
     });
 };
