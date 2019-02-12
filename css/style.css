@@ -1,0 +1,135 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 95vh;
+    /* background-color: black; */
+}
+main {
+    width: 95%;
+    height: 95%;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+.comp {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 50%;
+    margin-bottom: .1em;
+}
+.player {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 50%;
+    margin-top: .1em;
+}
+.deck {
+    display: flex;
+    width: 15%;
+    height: 70%;
+    margin-top: 2em;
+    border-radius: 50%;
+}
+.action {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 90%;
+    margin-top: 1em;
+}
+.hand {
+    display: flex;
+    justify-content: space-around;
+    height: 30%;
+    width: 100%;
+    text-align: center;
+}
+.comphand {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+    width: 12%;
+    border-radius: 50%;
+    margin-top: .3em;
+}
+.playerhand {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+    width: 12%;
+    border-radius: 50%;
+    margin-top: .3em;
+}
+.field {
+    display: flex;
+    justify-content: space-around;
+    height: 70%;
+    width: 100%;
+}
+.compfield {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+    width: 20%;
+    margin: .5em;
+    border-radius: 50%;
+    text-align: center;
+}
+.playerfield {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+    width: 20%;
+    margin: .5em;
+    border-radius: 50%;
+    text-align: center;
+}
+.name {
+    height: 30%;
+    width: 80%;
+    border-radius: 50%;
+}
+.atk {
+    height: 20%;
+    width: 20%;
+    border-radius: 50%;
+}
+.hp {
+    height: 20%;
+    width: 20%;
+    border-radius: 50%;
+}
+.lp {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 70%;
+    margin-top: 1em;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+* {
+    border: 1px solid black;
+}
