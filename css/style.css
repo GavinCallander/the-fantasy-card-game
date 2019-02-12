@@ -61,7 +61,8 @@ main {
     width: 100%;
     text-align: center;
     border: 1px solid goldenrod;
-    border-radius: 20%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 .comphand {
     display: flex;
@@ -142,4 +143,5 @@ main {
     justify-content: center;
     align-items: center;
     font-size: 3em;
+    border: 1px solid goldenrod;
 }

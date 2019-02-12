@@ -2,10 +2,10 @@
 Made Feb 2019 by Gavin Callander - WDI student at General Assembly: Seattle, WA
 
 # Instructions
-- Each player begins with three cards in their hand
-- Starting player is randomized and can draw and field a card on turn one, however may not attack
-- Turns alternate from this point, with each player able to draw, field and attack once per turn. For the human player, this is done by clicking on their deck to draw; clicking on a card in their hand to field; and by clicking both the card they have fielded and the card they wish to attack on the enemy side
-- The game ends when one player's LP (shown to the side of each hand) drops to or below zero
+- Each player begins with three cards in their hand.
+- Starting player is randomized and can draw and field a card on turn one, however may not attack.
+- Turns alternate from this point, with each player able to draw, field and attack once per turn. For the human player, this is done by clicking on their deck to draw; clicking on a card in their hand to field; and by clicking both the card they have fielded and the card they wish to attack on the enemy side. As play continues, players attack with all cards they have managed to place on the field.
+- The game ends when one player's LP (shown to the side of each hand) drops to or below zero.
 
 # About
 THE CARD GAME was developed using HTML5, CSS and Javascript.
@@ -41,4 +41,4 @@ THE CARD GAME was developed using HTML5, CSS and Javascript.
     Given the extra time allotted, CSS was restructured into flex. Previously, the game had no responsiveness so this was felt to be more beneficial to the end user.
 
 ## Future additions
-In it's current state, the game functions as a very rudimentary version 1. Future versions would ideally include images and animations to create a more immersive experience for the user. Additionally, a card tiering system would also make sense from a gameplay perspective. This would likely take the appearance of a tiering system similar to Hearthstone or Magic the Gathering.
+In it's current state, the game functions as a very rudimentary version 1. Future versions would ideally include images and animations to create a more immersive experience for the user. Additionally, a card tiering system would also make sense from a gameplay perspective. This would likely take the appearance of a tiering system similar to Hearthstone or Magic the Gathering. 

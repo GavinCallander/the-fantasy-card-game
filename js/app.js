@@ -1,4 +1,3 @@
-console.log("RUNNING!");
 // Card decks
 var playerDeck = [
     {
@@ -172,10 +171,6 @@ function startingPlayer() {
     } else {
         cTurn = true;
     };
-    console.log("player goes first", pTurn);
-    console.log(playerHand);
-    console.log("computer goes first", cTurn);
-    console.log(compHand);
 };
 function turn() {
     if (pTurn === true) {
@@ -188,8 +183,8 @@ function turn() {
 // set event listener for draw add gameOver************
 function playerTurn() {
     if (playerDeck.length > 0) {
+        pDeck.style.backgroundColor = "orange";
         pDeck.addEventListener("click", playerDrawCard);
-        console.log(playerHand);
     } else {
         pHand.forEach(function(card) {
             card.addEventListener("click", playerFieldCard)
@@ -198,21 +193,21 @@ function playerTurn() {
 };
 // draw card, set event listener for field card
 function playerDrawCard() {
-    console.log("CLICK");
     for (let i = 0; i < 1; i++) {
         playerHand.push(playerDeck.shift(i, 1));
     };
     showPlayerHandCards();
+    pDeck.style.backgroundColor = "transparent";
     pDeck.removeEventListener("click", playerDrawCard);
     if (playerHand.length > 0) {
         pHand.forEach(function(card) { 
             card.addEventListener("click", playerFieldCard);
+            card.style.backgroundColor = "orange";
         });
     };
 };
 // field card set event listener for battle
 function playerFieldCard() {
-    console.log("CLICK");
     for (let i = 0; i < playerHand.length; i++) {
         if (this.dataset.name === playerHand[i].name) {
             playerField.push(playerHand.splice(i, 1)[0]);
@@ -220,26 +215,30 @@ function playerFieldCard() {
             pHand[i].children[1].textContent = "";
             pHand[i].children[2].textContent = "";
         };
-        console.log(playerField);
         showPlayerFieldCards();
             pHand.forEach(function(card) {
                 card.removeEventListener("click", playerFieldCard);
+                card.style.backgroundColor = "transparent";
         });
         if (turnOne === true) {
             pLp.addEventListener("click", endTurn);
+            pLp.style.backgroundColor = "orange";
         } else {
             pField.forEach(function(card) {
                 card.addEventListener("click", playerAttack);
+                card.style.backgroundColor = "orange";
             });
         };
     };
 };
 // if comp has cards in field, battle, else attack lp directly
 function playerAttack() {
-    console.log("CLICK");
     for (let i = 0; i < playerField.length; i++) {
         battleField.push(playerField[i]);
         playerCard = battleField[0];
+        pField.forEach(function(card) {
+            card.style.backgroundColor = "transparent";
+        })
         if (compField.length > 0) {
             cField.forEach(function(card) {
                 card.addEventListener("click", playerBattle);
@@ -249,13 +248,13 @@ function playerAttack() {
         showCompLp();
         battleField = [];
         endGame();
-        endTurn();
+        pLp.style.backgroundColor = "orange";
+        pLp.addEventListener("click", endTurn);
         };
     };
 };
 // battle logic
 function playerBattle() {
-    console.log("CLICK");
     for (let i = 0; i < compField.length; i++) {
         if (this.dataset.name === compField[i].name) {
             battleField.push(compField[i]);
@@ -265,6 +264,7 @@ function playerBattle() {
     };
     cField.forEach(function(card) {
         card.removeEventListener("click", playerBattle);
+        card.style.backgroundColor = "transparent";
     });
 };
 // battle result calculation
@@ -314,14 +314,12 @@ function compTurn() {
 function compDrawCard() {
     for (let i = 0; i < 1; i++) {
         compHand.push(compDeck.shift());
-        console.log("COMP DRAWS CARD");
     };
     showCompHandCards();
     setTimeout(compFieldCard, 2000);
 };
 // field card
 function compFieldCard() {
-    console.log("COMP FIELDS CARD");
     let i = Math.floor(Math.random() * compHand.length);
         compField.push(compHand.splice(i, 1)[0]);
         cHand[i].children[0].textContent = "";
@@ -386,11 +384,11 @@ function compDirect() {
 };
 // end turn logic
 function endTurn() {
-    console.log("TURN COMPLETE!");
     if (pTurn === true) {
         pTurn = false;
         cTurn = true;
         turnOne = false;
+        pLp.style.backgroundColor = "transparent";
         compTurn();
     } else {
         cTurn = false;
@@ -401,9 +399,7 @@ function endTurn() {
 };
 function endGame() {
     if (playerLp < 1) {
-        console.log("Computer Wins!");
     } else if (compLp < 1) {
-        console.log("Player Wins!");
     };
 };
 // ***PLAYER DISPLAY LOGIC***
