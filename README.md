@@ -8,7 +8,7 @@ Made Feb 2019 by Gavin Callander - WDI student at General Assembly: Seattle, WA
 - The game ends when one player's LP (shown to the side of each hand) drops to or below zero.
 
 # About
-THE CARD GAME was developed using HTML5, CSS and Javascript.
+The Fantasy Card Game was developed using HTML5, CSS and Javascript.
 
 ### 2/2
     Development began with a combination of initial wireframing and brainstorming as to what type of game it would be. Ultimately, the decision was made to create a game styled as a hybrid of Hearthstone and Yu-Gi-Oh Worldwide Edition.

@@ -405,7 +405,7 @@ function endGame() {
 // ***PLAYER DISPLAY LOGIC***
 function showPlayerLp() {
     pLp.textContent = playerLp;
-    if (playerLp < 0) {
+    if (playerLp < 1) {
         pLp.textContent = "LOSER!";
     };
 };
